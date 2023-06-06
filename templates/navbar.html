@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{url_for('index')}}">EatApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 order-1">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('features')}}">რას გთავაზობთ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('costumers')}}">მომხმარებლები</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('pricing')}}">ფასები</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('resources')}}">რესურსები</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('contact')}}">კონტაქტი</a>
+                </li>
+                <a href="{{url_for('login')}}">
+                    <button type="button" class="test2">შესვლა</button>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
