@@ -9,7 +9,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0 order-1">
 
-
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('features')}}">რას გთავაზობთ</a>
                 </li>
@@ -25,9 +24,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('contact')}}">კონტაქტი</a>
                 </li>
-                <a href="{{url_for('login')}}">
-                    <button type="button" class="test2">შესვლა</button>
-                </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('dashboard')}}">პროფილი</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('logout')}}">
+                        <span style="background-color: red; color: white; padding: 6px 12px; border-radius: 4px;">გასვლა</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('login')}}">
+                        <span style="background-color: dodgerblue; color: white; padding: 6px 12px; border-radius: 4px;">შესვლა</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('register')}}">
+                        <span style="background-color: forestgreen; color: white; padding: 6px 12px; border-radius: 4px;">რეგისტრაცია</span>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </div>
